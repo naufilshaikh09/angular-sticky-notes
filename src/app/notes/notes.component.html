@@ -5,8 +5,23 @@
     <mat-icon (click)="onRemoveNote(i)" class="icon">close</mat-icon>
   </mat-card-header>
   <mat-card-content>
-    <p>
+    <!-- <p>
       <textarea matInput placeholder="Take a note.." class="note-area"></textarea>
-    </p>
+    </p> -->
+    <editor apiKey="dd7blvqhxa48g7ppr618nhmwuqdusw01y0hpc2vpcoqadakj" [init]="{
+      height: 400,
+      menubar: false,
+      placeholder:'Take a note..',
+      plugins: [
+        'advlist autolink lists link image charmap print preview anchor',
+        'searchreplace visualblocks code fullscreen',
+        'insertdatetime media table paste code help wordcount'
+      ],
+      toolbar:
+        'undo redo | formatselect | bold italic backcolor | \
+        alignleft aligncenter alignright alignjustify | \
+        bullist numlist outdent indent | removeformat | help'
+    }"></editor>
   </mat-card-content>
 </mat-card>
+

@@ -7,6 +7,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
+import { EditorModule } from '@tinymce/tinymce-angular';
+
 @NgModule({
   declarations: [
     NotesComponent
@@ -16,7 +18,8 @@ import { MatIconModule } from '@angular/material/icon';
     NotesRoutingModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    EditorModule
   ]
 })
 export class NotesModule { }
