@@ -6,28 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notes.component.css']
 })
 export class NotesComponent implements OnInit {
-
+  noteArray = [{}];
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  fieldArray: Array<any> = [
-    {
-    }
-  ];
-  newAttribute: any = {};
-
-  onAdd() {
-    this.fieldArray.push(this.newAttribute);
-    this.newAttribute = {};
+  onAddNote() {
+    this.noteArray.push({});
   }
 
-  onRemove(index: number) {
+  onRemoveNote(index: number) {
     debugger
-    this.fieldArray.splice(index, 1);
-    if (this.fieldArray.length == 0)
-      this.onAdd();
+    this.noteArray.splice(index, 1);
+    if (this.noteArray.length == 0)
+      this.onAddNote();
   }
-
 }

@@ -1,7 +1,12 @@
+::ng-deep .mat-card-header-text {
+  margin: 0 0px !important;
+}
+
 .example-card {
   max-width: 400px;
   margin: 10px 10px 10px 10px;
   border: 1px solid #fdeaea;
+  float: left;
 }
 
 .note-area{
@@ -9,4 +14,12 @@
   height:100px;
   max-width: 400px;
   border: 0px solid;
+}
+
+.example-spacer {
+  flex: 1;
+}
+
+.icon:hover {
+  cursor: pointer;
 }
