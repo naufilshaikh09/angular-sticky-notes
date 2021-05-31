@@ -6,6 +6,7 @@ import { NotesComponent } from './notes.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { EditorModule } from '@tinymce/tinymce-angular';
 
@@ -19,6 +20,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
+    MatTooltipModule,
     EditorModule
   ]
 })

@@ -1,15 +1,19 @@
 <mat-card class="example-card" *ngFor="let field of noteArray; let i = index">
   <mat-card-header>
-    <mat-icon (click)="onAddNote()" class="icon">note_add</mat-icon>
+    <mat-icon (click)="onAddNote()" class="icon" matTooltip="Add note">
+      add
+    </mat-icon>
     <span class="example-spacer"></span>
-    <mat-icon (click)="onRemoveNote(i)" class="icon">close</mat-icon>
+    <mat-icon (click)="onRemoveNote(i)" class="icon" matTooltip="Remove note">
+      close
+    </mat-icon>
   </mat-card-header>
   <mat-card-content>
     <!-- <p>
       <textarea matInput placeholder="Take a note.." class="note-area"></textarea>
     </p> -->
     <editor apiKey="dd7blvqhxa48g7ppr618nhmwuqdusw01y0hpc2vpcoqadakj" [init]="{
-      height: 400,
+      height: 300,
       menubar: false,
       placeholder:'Take a note..',
       plugins: [
@@ -24,4 +28,3 @@
     }"></editor>
   </mat-card-content>
 </mat-card>
-
