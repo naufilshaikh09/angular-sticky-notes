@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notes.component.css']
 })
 export class NotesComponent implements OnInit {
-  noteArray = [{}];
+  noteArray = [{}]; color = "#8fa555";
   constructor() { }
 
   ngOnInit(): void {
@@ -17,7 +17,6 @@ export class NotesComponent implements OnInit {
   }
 
   onRemoveNote(index: number) {
-    debugger
     this.noteArray.splice(index, 1);
     if (this.noteArray.length == 0)
       this.onAddNote();

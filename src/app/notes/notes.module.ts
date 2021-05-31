@@ -6,9 +6,10 @@ import { NotesComponent } from './notes.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
-    EditorModule
+    EditorModule,
+    ColorPickerModule
   ]
 })
 export class NotesModule { }

@@ -4,6 +4,7 @@
       add
     </mat-icon>
     <span class="example-spacer"></span>
+    <input [(colorPicker)]="color" [style.background]="color" class="colorPicker" />
     <mat-icon (click)="onRemoveNote(i)" class="icon" matTooltip="Remove note">
       close
     </mat-icon>
