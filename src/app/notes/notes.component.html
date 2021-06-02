@@ -4,26 +4,36 @@
       add
     </mat-icon>
     <span class="example-spacer"></span>
-    <input [(colorPicker)]="color" [style.background]="color" class="color-picker" [cpPosition]="'left'" />
+    <input [(colorPicker)]="color" [style.background]='color' class="color-picker" (click)="selectItem(i)"
+      [cpPosition]="'left'" />
     <mat-icon (click)="onRemoveNote(i)" class="icon" matTooltip="Remove note">
       close
     </mat-icon>
   </mat-card-header>
   <mat-card-content>
-    <textarea matInput placeholder="Take a note.." class="note-area" [style.background]="color"></textarea>
-    <!-- <editor apiKey="dd7blvqhxa48g7ppr618nhmwuqdusw01y0hpc2vpcoqadakj" [init]="{
-      height: 300,
-      menubar: false,
-      placeholder:'Take a note..',
-      plugins: [
-        'advlist autolink lists link image charmap print preview anchor',
-        'searchreplace visualblocks code fullscreen',
-        'insertdatetime media table paste code help wordcount'
-      ],
-      toolbar:
-        'undo redo | formatselect | bold italic backcolor | \
-        alignleft aligncenter alignright alignjustify | \
-        bullist numlist outdent indent | removeformat | help'
-    }"></editor> -->
+    <textarea matInput placeholder="Take a note.." class="note-area" [style.background]='color'></textarea>
   </mat-card-content>
 </mat-card>
+
+<!-- [style.background]="color" -->
+<!-- [style.background]="{'color': selectedIdx == i}" -->
+<!-- [ngClass]="{'active': selectedIdx == i}" -->
+
+<!-- <li *ngFor="let item of menu;let i = index" class="menu-list" [ngClass]="{'active': selectedIdx == i}">
+  <a (click)="selectItem(i)"> {{item.name}}</a>
+</li> -->
+
+<!-- <editor apiKey="dd7blvqhxa48g7ppr618nhmwuqdusw01y0hpc2vpcoqadakj" [init]="{
+  height: 300,
+  menubar: false,
+  placeholder:'Take a note..',
+  plugins: [
+    'advlist autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+    'insertdatetime media table paste code help wordcount'
+  ],
+  toolbar:
+    'undo redo | formatselect | bold italic backcolor | \
+    alignleft aligncenter alignright alignjustify | \
+    bullist numlist outdent indent | removeformat | help'
+}"></editor> -->
